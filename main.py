@@ -142,7 +142,7 @@ while True:
             break
 
         while True:
-            input(f"Press `Enter` to get the next number...")
+            input("Press `Enter` to get the next number...")
             next_resp = requests.post(URL + "next", data=json.dumps({"name": name}))
             status = json.loads(next_resp.text).get("message")
             if status:
